@@ -14,6 +14,7 @@ function handleSuggester(event) {
   const swift = document.querySelector("div#swift");
   const cPlus = document.querySelector("div#cPlus");
   const formBody = document.querySelector("div#formBody");
+  const refresh = document.querySelector("div#refresh");
 
 
   python.setAttribute("class", "hidden");
@@ -22,90 +23,107 @@ function handleSuggester(event) {
   cPlus.setAttribute("class", "hidden");
   formBody.setAttribute("class", "reveal");
   headSuggest.setAttribute("class", "hidden");
+  refresh.setAttribute("class", "hidden");
 
-if(!(perferredOS === 'select')){
-  if (platform === "smartPhones" && perferredOS === "windows" && logic === "tools") {
-    java.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "smartPhones" && perferredOS === "windows" && logic === 'websites') {
-    java.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "smartPhones" && perferredOS === "linux" && logic === "tools") {
-    java.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "smartPhones" && perferredOS === "linux" && logic === 'websites') {
-    java.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "smartPhones" && perferredOS === "macOS" && logic === "tools") {
-    swift.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "smartPhones" && perferredOS === "macOS" && logic === 'websites') {
-    swift.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "tablets" && perferredOS === "macOS" && logic === "tools") {
-    swift.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "tablets" && perferredOS === "macOS" && logic === 'websites') {
-    swift.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "tablets" && perferredOS === "windows" && logic === "tools") {
-    java.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "tablets" && perferredOS === "windows" && logic === 'websites') {
-    java.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "tablets" && perferredOS === "linux" && logic === "tools") {
-    swift.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "tablets" && perferredOS === "linux" && logic === 'websites') {
-    python.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "desktops" && perferredOS === "windows" && logic === "tools") {
-    cPlus.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "desktops" && perferredOS === "windows" && logic === 'websites') {
-    cPlus.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "desktops" && perferredOS === "macOS" && logic === "tools") {
-    python.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "desktops" && perferredOS === "macOS" && logic === 'websites') {
-    cPlus.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "desktops" && perferredOS === "linux" && logic === "tools") {
-    python.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
-  } else if (platform === "desktops" && perferredOS === "llinux" && logic === 'websites') {
-    python.removeAttribute("class", "hidden");
-    formBody.setAttribute("class", "hidden");
-    headSuggest.removeAttribute("class", "hidden");
+  if (!(perferredOS === 'select')) {
+    if (platform === "smartPhones" && perferredOS === "windows" && logic === "tools") {
+      java.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "smartPhones" && perferredOS === "windows" && logic === 'websites') {
+      java.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "smartPhones" && perferredOS === "linux" && logic === "tools") {
+      java.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "smartPhones" && perferredOS === "linux" && logic === 'websites') {
+      java.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "smartPhones" && perferredOS === "macOS" && logic === "tools") {
+      swift.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "smartPhones" && perferredOS === "macOS" && logic === 'websites') {
+      swift.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "tablets" && perferredOS === "macOS" && logic === "tools") {
+      swift.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "tablets" && perferredOS === "macOS" && logic === 'websites') {
+      swift.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "tablets" && perferredOS === "windows" && logic === "tools") {
+      java.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "tablets" && perferredOS === "windows" && logic === 'websites') {
+      java.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "tablets" && perferredOS === "linux" && logic === "tools") {
+      swift.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "tablets" && perferredOS === "linux" && logic === 'websites') {
+      python.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "desktops" && perferredOS === "windows" && logic === "tools") {
+      cPlus.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "desktops" && perferredOS === "windows" && logic === 'websites') {
+      cPlus.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "desktops" && perferredOS === "macOS" && logic === "tools") {
+      python.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "desktops" && perferredOS === "macOS" && logic === 'websites') {
+      cPlus.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "desktops" && perferredOS === "linux" && logic === "tools") {
+      python.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    } else if (platform === "desktops" && perferredOS === "linux" && logic === 'websites') {
+      python.removeAttribute("class", "hidden");
+      formBody.setAttribute("class", "hidden");
+      headSuggest.removeAttribute("class", "hidden");
+      refresh.removeAttribute("class", "hidden");
+    }
+  } else {
+    alert('top three questions but be answered!');
   }
-}else{
-  alert('top three questions but be answered!');
-}
-
-
+  refresh.addEventListener('click', function () {
+    location.reload();
+  });
   resetPage();
-
-
-
 }
 
 function resetPage() {
