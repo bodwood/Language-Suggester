@@ -8,11 +8,11 @@
 
 ## Link
 
-_https://github.com/bodwood/portfolio_
+_https://github.com/bodwood/Language-Suggester_
 
 ## Github Site
 
-_https://bodwood.github.io/porfolio_
+_https://bodwood.github.io/Language-Suggester_
 
 ---
 
@@ -20,13 +20,14 @@ _https://bodwood.github.io/porfolio_
 
 * HTML
 * CSS
+* JavaScript
 * Bootstrap
 
 ## Description
 
-_This webpage allows users to view a portfolio about Bodie Wood (myself). Users can view my accomplishments, education, skills, and what I love to do._
+_This website suggests programming languages for users based on given questions._
 
-_Users are able to view projects by clicking on the links pointing to those projects_
+_Users are able to answer questions and click submit to achieve thier results._
 
 ## Setup/Installation Requirements
 
@@ -36,8 +37,7 @@ _Users are able to view projects by clicking on the links pointing to those proj
 
 ## Known Bugs
 
-* _The h1 header within the education div is currently not responsive_
-* _The college and certificate elements are not response._
+* _The last few questions need to be updated to interact with user, they are currently not being traced._
 
 ---
 
