@@ -6,3 +6,7 @@ body{
 .hidden {
   display: none;
 }
+
+.reveal {
+  display:block;
+}
