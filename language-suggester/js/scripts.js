@@ -23,7 +23,7 @@ function handleSuggester(event) {
   formBody.setAttribute("class", "reveal");
   headSuggest.setAttribute("class", "hidden");
 
-if(platform || perferredOS || logic){
+if(!(perferredOS === 'select')){
   if (platform === "smartPhones" && perferredOS === "windows" && logic === "tools") {
     java.removeAttribute("class", "hidden");
     formBody.setAttribute("class", "hidden");
