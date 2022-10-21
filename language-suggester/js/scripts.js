@@ -15,6 +15,7 @@ function handleSuggester(event) {
   const cPlus = document.querySelector("div#cPlus");
   const formBody = document.querySelector("div#formBody");
   const refresh = document.querySelector("div#refresh");
+  const error = document.querySelector("div#error");
 
 
   python.setAttribute("class", "hidden");
@@ -24,6 +25,7 @@ function handleSuggester(event) {
   formBody.setAttribute("class", "reveal");
   headSuggest.setAttribute("class", "hidden");
   refresh.setAttribute("class", "hidden");
+  error.setAttribute("class", "hidden");
 
   if (!(perferredOS === 'select')) {
     if (platform === "smartPhones" && perferredOS === "windows" && logic === "tools") {
@@ -118,7 +120,9 @@ function handleSuggester(event) {
       refresh.removeAttribute("class", "hidden");
     }
   } else {
-    alert('top three questions but be answered!');
+    formBody.setAttribute("class", "hidden");
+    error.removeAttribute("class", "hidden");
+    refresh.removeAttribute("class", "hidden");
   }
   refresh.addEventListener('click', function () {
     location.reload();
