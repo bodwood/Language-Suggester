@@ -9,51 +9,51 @@
 
 <body>
   <form id="suggester">
-  <div class="reveal" id="formBody">
-  <h1>Language Suggester</h1>
-  <h6>Only the top three questions are required</h6>
-  <br>
-  <form id="suggester">
-    <h3>What platform interests you most?</h3>
-    <input type="radio" name="platform" value="smartPhones" checked="checked">
-    <label for="smartPhones">Smart Phones</label>
-    <br>
-    <input type="radio" name="platform" value="tablets">
-    <label for="tablets">Tablets (iPads, Surfaces)</label>
-    <br>
-    <input type="radio" name="platform" value="desktops">
-    <label for="desktops">Desktop/Laptops</label>
-    <br>
-    <h3>What is your preferred OS?</h3>
-    <select id="operatingSystem">
-      <option value="select">select</option>
-      <option value="windows">Windows</option>
-      <option value="macOS">macOS (Apple)</option>
-      <option value="linux">Linux</option>
-    </select>
-    <br>
-    <h3>Would you rather design websites or build the logic for applications?</h3>
-    <input type="radio" name="logic" value="websites" checked="checked">
-    <label for="websites">Design websites</label>
-    <input type="radio" name="logic" value="tools">
-    <label for="tools">Build logic</label>
-    <br>
-    <h3>How much programming experience do you have?</h3>
-    <label for="experience">1 - 5 (5 being the most): </label>
-    <input type="number" id="experience" min="1" max="5">
-    <br>
-    <h3>Are you interested in building video games?</h3>
-    <label for="videoGames">Type "Yes" or "No":
-      <input type="text" id="videoGames">
-    </label>
-    <br>
-    <br>
-    <button type="submit" id="btn">Submit</button>
-  </div>
+    <div class="reveal" id="formBody">
+      <h1>Language Suggester</h1>
+      <h6>Only the top three questions are required</h6>
+      <br>
+      <form id="suggester">
+        <h3>What platform interests you most?</h3>
+        <input type="radio" name="platform" value="smartPhones" checked="checked">
+        <label for="smartPhones">Smart Phones</label>
+        <br>
+        <input type="radio" name="platform" value="tablets">
+        <label for="tablets">Tablets (iPads, Surfaces)</label>
+        <br>
+        <input type="radio" name="platform" value="desktops">
+        <label for="desktops">Desktop/Laptops</label>
+        <br>
+        <h3>What is your preferred OS?</h3>
+        <select id="operatingSystem">
+          <option value="select">select</option>
+          <option value="windows">Windows</option>
+          <option value="macOS">macOS (Apple)</option>
+          <option value="linux">Linux</option>
+        </select>
+        <br>
+        <h3>Would you rather design websites or build the logic for applications?</h3>
+        <input type="radio" name="logic" value="websites" checked="checked">
+        <label for="websites">Design websites</label>
+        <input type="radio" name="logic" value="tools">
+        <label for="tools">Build logic</label>
+        <br>
+        <h3>How much programming experience do you have?</h3>
+        <label for="experience">1 - 5 (5 being the most): </label>
+        <input type="number" id="experience" min="1" max="5">
+        <br>
+        <h3>Are you interested in building video games?</h3>
+        <label for="videoGames">Type "Yes" or "No":
+          <input type="text" id="videoGames">
+        </label>
+        <br>
+        <br>
+        <button type="submit" id="btn">Submit</button>
+    </div>
   </form>
 
   <div class="hidden" id="headSuggest">
-    <h2>Your selected options suggest that you will work great with.... </h2>
+    <h1>Your selected options suggest that you will work great with.... </h1>
   </div>
   <div class="hidden" id="python">
     <h3>Python</h3>
