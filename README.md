@@ -10,10 +10,6 @@
 
 _https://github.com/bodwood/Language-Suggester_
 
-## Github Site
-
-_https://bodwood.github.io/Language-Suggester_
-
 ---
 
 ## Technologies Used
